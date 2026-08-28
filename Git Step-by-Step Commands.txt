@@ -1,0 +1,104 @@
+Git Step-by-Step Commands
+1. Check Git installation
+git --version
+Checks whether Git is installed and shows the installed version.
+2. Configure username
+git config --global user.name "Your Name"
+Sets the name that appears in your Git commits.
+3. Configure email
+git config --global user.email "you@example.com"
+Sets the email associated with your Git commits.
+4. Create a Git repository
+git init
+Creates a new Git repository in the current folder.
+5. Check repository status
+git status
+Shows changed, new, and staged files.
+6. Add a file
+git add filename.txt
+Moves a specific file to the staging area.
+7. Add all files
+git add .
+Stages all changes in the current directory.
+8. Create a commit
+git commit -m "Initial commit"
+Saves the staged changes with a message.
+9. View commit history
+git log
+Displays previous commits.
+10. Clone a repository
+git clone https://github.com/user/project.git
+Downloads an existing remote repository to your computer.
+11. Check remote repository
+git remote -v
+Shows the remote repository URLs.
+12. Add a remote repository
+git remote add origin https://github.com/user/project.git
+Connects your local repository to a remote repository.
+13. Push code
+git push origin main
+Uploads your local commits to the remote main branch.
+14. Pull latest code
+git pull origin main
+Downloads and integrates the latest changes from the remote main branch.
+15. Create a branch
+git branch feature-login
+Creates a new branch.
+16. Switch to a branch
+git switch feature-login
+Moves you to the specified branch.
+17. Create and switch to a branch
+git switch -c feature-login
+Creates a new branch and switches to it immediately.
+18. List branches
+git branch
+Shows your local branches.
+19. Merge a branch
+git switch main
+git merge feature-login
+Switches to main and merges feature-login into it.
+20. Delete a branch
+git branch -d feature-login
+Deletes a branch after it has been merged.
+21. See unstaged changes
+git diff
+Shows changes that have not been staged.
+22. Unstage a file
+git restore --staged filename.txt
+Removes the file from the staging area without deleting your changes.
+23. Discard file changes
+git restore filename.txt
+Restores the file to its last committed state. Be careful: uncommitted changes can be lost.
+24. Show commit details
+git show
+Displays information about a particular commit.
+25. Save work temporarily
+git stash
+Temporarily stores uncommitted changes.
+26. Restore stashed work
+git stash pop
+Brings the previously stashed changes back.
+________________________________________
+⭐ Common Git Workflow
+git init
+git status
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/user/project.git
+git push -u origin main
+For future changes:
+git status
+git add .
+git commit -m "Updated project"
+git push
+Git workflow to remember
+Working Directory → Staging Area → Commit → Remote Repository
+Create/Edit files
+      ↓
+   git add .
+      ↓
+ git commit
+      ↓
+  git push
+      ↓
+   GitHub
